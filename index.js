@@ -36,4 +36,18 @@ function modifyLogo(text, textColor, shape, shapeColor) {
     fs.writeFileSync('output.svg', modified);
 }
 
-    
+console.log("Logo has been modified successfully.");
+
+
+// Ask user if they want to open the file
+const open = prompt("Do you want to open the file? (yes/no): ");
+if (open.toLowerCase() === 'yes') {
+    const { exec } = require('child_process');
+    exec('open output.svg', (err, stdout, stderr) => {
+        if (err) {
+            console.error(err);
+            return;
+        }
+    });
+}
+
