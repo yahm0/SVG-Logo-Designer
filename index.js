@@ -18,3 +18,10 @@ function generateShape(shape, color) {
             throw new Error("Unsupported shape: " + shape);
     }
 }
+
+// Read user input
+const text = prompt("Enter the text for the logo: ");
+const textColor = prompt("Enter the text color: ");
+const shape = prompt("Enter the shape (circle, square, triangle): ");
+const shapeColor = prompt("Enter the shape color: ");
+
