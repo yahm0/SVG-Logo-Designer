@@ -52,4 +52,4 @@ Enter the shape color (keyword or hexadecimal): Red
 
 This will generate a logo with the text "LMB" in black color inside a red triangle.
 
-### Here is a video Link: 
+### Here is a video Link: https://drive.google.com/file/d/1USVtsIw-9xuSCmfcgND86vibviMc-etJ/view?pli=1
