@@ -46,7 +46,7 @@ Here's an example of how to generate a logo:
 ```bash
 Enter characters for the logo text: TEST
 Enter the text color (keyword or hexadecimal): blue
-Choose a shape (circle, triangle, square): cirlce
+Choose a shape (circle, triangle, square): circle
 Enter the shape color (keyword or hexadecimal): red
 ```
 
