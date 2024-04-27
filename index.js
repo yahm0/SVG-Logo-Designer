@@ -3,8 +3,9 @@ const prompt = require('prompt-sync')();
 const { exec } = require('child_process');
 
 function generateShape(shape, color) {
-    const size = 100;  // Size for better visibility
-    shape = shape.toLowerCase();  // Normalize the shape input to lowercase
+    const size = 100; // Size for better visibility
+    shape = shape.toLowerCase(); // Normalize the shape input to lowercase
+
     switch (shape) {
         case 'circle':
             return `<circle cx="150" cy="100" r="${size}" fill="${color}" />`;
@@ -24,14 +25,14 @@ function modifyLogo() {
     const shape = prompt("Enter the shape (circle, square, triangle): ");
     const shapeColor = prompt("Enter the shape color: ");
 
-    const template = fs.readFileSync('template.svg', 'utf8');
+    const template = fs.readFileSync('circle.svg', 'utf8');
     const shapeElement = generateShape(shape, shapeColor);
-    const modified = template
-        .replace('<!-- TEXT -->', text)
-        .replace('<!-- TEXT_COLOR -->', textColor)
-        .replace('<!-- SHAPE -->', shapeElement);
-    fs.writeFileSync('output.svg', modified);
 
+    const modified = template
+        .replace('<circle cx="150" cy="100" r="80" fill="green" />', shapeElement)
+        .replace('<text x="150" y="125" font-size="60" text-anchor="middle" fill="white">SVG</text>', `<text x="150" y="125" font-size="60" text-anchor="middle" fill="${textColor}">${text}</text>`);
+
+    fs.writeFileSync('output.svg', modified);
     console.log("Logo has been modified successfully.");
 
     // Open the file if requested
