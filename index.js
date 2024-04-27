@@ -51,3 +51,9 @@ if (open.toLowerCase() === 'yes') {
     });
 }
 
+// Ask user if they want to modify another logo
+const repeat = prompt("Do you want to modify another logo? (yes/no): ");
+if (repeat.toLowerCase() === 'yes') {
+    modifyLogo();
+}
+
