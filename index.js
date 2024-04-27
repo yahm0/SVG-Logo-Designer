@@ -25,7 +25,7 @@ function modifyLogo() {
     const shape = prompt("Enter the shape (circle, square, triangle): ");
     const shapeColor = prompt("Enter the shape color: ");
 
-    const template = fs.readFileSync('circle.svg', 'utf8');
+    const template = fs.readFileSync('./Assets/circle.svg', 'utf8');
     const shapeElement = generateShape(shape, shapeColor);
 
     const modified = template
@@ -38,7 +38,7 @@ function modifyLogo() {
     // Open the file if requested
     const open = prompt("Do you want to open the file? (yes/no): ");
     if (open.toLowerCase() === 'yes') {
-        exec('open output.svg', (err) => {
+        exec('start output.svg', (err) => {
             if (err) {
                 console.error("Failed to open the file:", err);
             }
