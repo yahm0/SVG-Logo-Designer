@@ -25,3 +25,15 @@ const textColor = prompt("Enter the text color: ");
 const shape = prompt("Enter the shape (circle, square, triangle): ");
 const shapeColor = prompt("Enter the shape color: ");
 
+// Modify the logo and save it to output.svg
+function modifyLogo(text, textColor, shape, shapeColor) {
+    const template = fs.readFileSync('template.svg', 'utf8');
+    const shapeElement = generateShape(shape, shapeColor);
+    const modified = template
+        .replace('<!-- TEXT -->', text)
+        .replace('<!-- TEXT_COLOR -->', textColor)
+        .replace('<!-- SHAPE -->', shapeElement);
+    fs.writeFileSync('output.svg', modified);
+}
+
+    
