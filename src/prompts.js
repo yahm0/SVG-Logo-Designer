@@ -4,8 +4,8 @@ const questions = [
   {
     type: 'input',
     name: 'text',
-    message: 'Enter text for the logo (up to 3 characters):',
-    validate: input => input.length <= 3 || 'Text must be 3 characters or less'
+    message: 'Enter text for the logo (up to 5 characters):',
+    validate: input => input.length <= 5 || 'Text must be 5 characters or less'
   },
   {
     type: 'input',
