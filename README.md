@@ -52,4 +52,4 @@ Enter the shape color (keyword or hexadecimal): red
 
 This will generate a circular logo with the blue text "TEST" with a red color fill.
 
-### Here is a video Link: https://drive.google.com/file/d/1USVtsIw-9xuSCmfcgND86vibviMc-etJ/view?pli=1
+### Here is a video Link: https://app.screencastify.com/v3/watch/oh29sUx6VKXQ06jL6gDP
